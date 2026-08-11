@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CalculatorAuxo Guides — Free Calculator Tutorials & Resources</title>
-    <meta name="description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages. Real examples, tips, and free tools.">
+    <meta name="description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages. Real examples, tips, and free tools." />
     <link rel="canonical" href="https://snowcalculator.github.io/CalculatorAuxo/">
-    <meta property="og:title" content="CalculatorAuxo Guides — Free Calculator Tutorials & Resources">
-    <meta property="og:description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages.">
-    <meta property="og:url" content="https://snowcalculator.github.io/CalculatorAuxo/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CalculatorAuxo Guides — Free Calculator Tutorials & Resources">
-    <meta name="twitter:description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages.">
+    <meta property="og:title" content="CalculatorAuxo Guides — Free Calculator Tutorials & Resources" />
+    <meta property="og:description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages." />
+    <meta property="og:url" content="https://snowcalculator.github.io/CalculatorAuxo/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CalculatorAuxo Guides — Free Calculator Tutorials & Resources" />
+    <meta name="twitter:description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages." />
     <style>
         /* ===== CSS Reset & Variables ===== */
         :root {
             --primary: #2d7b46;
             --primary-dark: #1f5a32;
             --primary-light: #e8f5ed;
-            --secondary: #1a5fb4;
             --text: #1e293b;
             --text-light: #475569;
             --bg: #f6f9f7;
             --white: #ffffff;
             --gray-100: #f1f5f4;
             --gray-200: #e2e8e6;
-            --gray-300: #cbd5d1;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             --radius: 10px;
@@ -58,10 +56,6 @@
         }
         a:hover {
             text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
         }
 
         .container {
@@ -564,7 +558,7 @@
     <header class="site-header" role="banner">
         <div class="container header-container">
             <div class="logo">
-                <a href="#" onclick="showPage('home')" aria-label="CalculatorAuxo Guides home">Calculator<span>Auxo</span> <small>Guides</small></a>
+                <a href="#" onclick="showPage('home'); return false;" aria-label="CalculatorAuxo Guides home">Calculator<span>Auxo</span> <small>Guides</small></a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primary-nav">
                 <span class="sr-only">Menu</span>
@@ -572,12 +566,12 @@
             </button>
             <nav class="main-nav" aria-label="Main navigation">
                 <ul id="primary-nav" class="nav-list">
-                    <li><a href="#" onclick="showPage('home')" class="active" data-page="home">Home</a></li>
-                    <li><a href="#" onclick="showPage('financial')" data-page="financial">Finance</a></li>
-                    <li><a href="#" onclick="showPage('math')" data-page="math">Math</a></li>
-                    <li><a href="#" onclick="showPage('fitness')" data-page="fitness">Fitness</a></li>
-                    <li><a href="#" onclick="showPage('gpa')" data-page="gpa">GPA</a></li>
-                    <li><a href="#" onclick="showPage('percentage')" data-page="percentage">Percentage</a></li>
+                    <li><a href="#" onclick="showPage('home'); return false;" class="active" data-page="home">Home</a></li>
+                    <li><a href="#" onclick="showPage('financial'); return false;" data-page="financial">Finance</a></li>
+                    <li><a href="#" onclick="showPage('math'); return false;" data-page="math">Math</a></li>
+                    <li><a href="#" onclick="showPage('fitness'); return false;" data-page="fitness">Fitness</a></li>
+                    <li><a href="#" onclick="showPage('gpa'); return false;" data-page="gpa">GPA</a></li>
+                    <li><a href="#" onclick="showPage('percentage'); return false;" data-page="percentage">Percentage</a></li>
                 </ul>
             </nav>
         </div>
@@ -599,29 +593,29 @@
                     <h2 class="section-title">Featured Guides</h2>
                     <div class="card-grid">
                         <article class="guide-card">
-                            <h3><a href="#" onclick="showPage('financial')">Financial Calculators Guide</a></h3>
+                            <h3><a href="#" onclick="showPage('financial'); return false;">Financial Calculators Guide</a></h3>
                             <p>Master paycheck, tax, NPV, loan, and retirement calculations. Understand financial formulas and make informed decisions.</p>
-                            <a href="#" onclick="showPage('financial')" class="btn btn-outline">Read Guide</a>
+                            <a href="#" onclick="showPage('financial'); return false;" class="btn btn-outline">Read Guide</a>
                         </article>
                         <article class="guide-card">
-                            <h3><a href="#" onclick="showPage('math')">Math Calculators Guide</a></h3>
+                            <h3><a href="#" onclick="showPage('math'); return false;">Math Calculators Guide</a></h3>
                             <p>Explore algebra, geometry, statistics, and equation solvers. Learn to solve complex problems with step-by-step help.</p>
-                            <a href="#" onclick="showPage('math')" class="btn btn-outline">Read Guide</a>
+                            <a href="#" onclick="showPage('math'); return false;" class="btn btn-outline">Read Guide</a>
                         </article>
                         <article class="guide-card">
-                            <h3><a href="#" onclick="showPage('fitness')">Fitness Calculators Guide</a></h3>
+                            <h3><a href="#" onclick="showPage('fitness'); return false;">Fitness Calculators Guide</a></h3>
                             <p>Calculate 1RM, VDOT, BMR, and training zones. Optimize your workouts with accurate fitness metrics.</p>
-                            <a href="#" onclick="showPage('fitness')" class="btn btn-outline">Read Guide</a>
+                            <a href="#" onclick="showPage('fitness'); return false;" class="btn btn-outline">Read Guide</a>
                         </article>
                         <article class="guide-card">
-                            <h3><a href="#" onclick="showPage('gpa')">GPA Calculator Guide</a></h3>
+                            <h3><a href="#" onclick="showPage('gpa'); return false;">GPA Calculator Guide</a></h3>
                             <p>Calculate cumulative, semester, and weighted GPA. Understand grading scales and academic performance tracking.</p>
-                            <a href="#" onclick="showPage('gpa')" class="btn btn-outline">Read Guide</a>
+                            <a href="#" onclick="showPage('gpa'); return false;" class="btn btn-outline">Read Guide</a>
                         </article>
                         <article class="guide-card">
-                            <h3><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></h3>
+                            <h3><a href="#" onclick="showPage('percentage'); return false;">Percentage Calculator Guide</a></h3>
                             <p>Master percentage calculations: increases, decreases, markups, and discounts. Essential for shopping, finance, and data analysis.</p>
-                            <a href="#" onclick="showPage('percentage')" class="btn btn-outline">Read Guide</a>
+                            <a href="#" onclick="showPage('percentage'); return false;" class="btn btn-outline">Read Guide</a>
                         </article>
                     </div>
                 </section>
@@ -642,7 +636,7 @@
             <!-- ===== FINANCIAL GUIDE ===== -->
             <div id="page-financial" class="page-content">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
-                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Financial Calculators Guide
+                    <a href="#" onclick="showPage('home'); return false;">Home</a> <span>›</span> Financial Calculators Guide
                 </nav>
                 <article class="article-content">
                     <h1>Financial Calculators Guide</h1>
@@ -698,8 +692,8 @@
                     <aside class="related-guides">
                         <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
-                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                            <li><a href="#" onclick="showPage('math'); return false;">Math Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage'); return false;">Percentage Calculator Guide</a></li>
                         </ul>
                     </aside>
                 </article>
@@ -708,7 +702,7 @@
             <!-- ===== MATH GUIDE ===== -->
             <div id="page-math" class="page-content">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
-                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Math Calculators Guide
+                    <a href="#" onclick="showPage('home'); return false;">Home</a> <span>›</span> Math Calculators Guide
                 </nav>
                 <article class="article-content">
                     <h1>Math Calculators Guide</h1>
@@ -760,8 +754,8 @@
                     <aside class="related-guides">
                         <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="#" onclick="showPage('financial')">Financial Calculators Guide</a></li>
-                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                            <li><a href="#" onclick="showPage('financial'); return false;">Financial Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage'); return false;">Percentage Calculator Guide</a></li>
                         </ul>
                     </aside>
                 </article>
@@ -770,7 +764,7 @@
             <!-- ===== FITNESS GUIDE ===== -->
             <div id="page-fitness" class="page-content">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
-                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Fitness Calculators Guide
+                    <a href="#" onclick="showPage('home'); return false;">Home</a> <span>›</span> Fitness Calculators Guide
                 </nav>
                 <article class="article-content">
                     <h1>Fitness Calculators Guide</h1>
@@ -822,8 +816,8 @@
                     <aside class="related-guides">
                         <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
-                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                            <li><a href="#" onclick="showPage('math'); return false;">Math Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage'); return false;">Percentage Calculator Guide</a></li>
                         </ul>
                     </aside>
                 </article>
@@ -832,7 +826,7 @@
             <!-- ===== GPA GUIDE ===== -->
             <div id="page-gpa" class="page-content">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
-                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> GPA Calculator Guide
+                    <a href="#" onclick="showPage('home'); return false;">Home</a> <span>›</span> GPA Calculator Guide
                 </nav>
                 <article class="article-content">
                     <h1>GPA Calculator Guide</h1>
@@ -884,8 +878,8 @@
                     <aside class="related-guides">
                         <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
-                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                            <li><a href="#" onclick="showPage('math'); return false;">Math Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage'); return false;">Percentage Calculator Guide</a></li>
                         </ul>
                     </aside>
                 </article>
@@ -894,7 +888,7 @@
             <!-- ===== PERCENTAGE GUIDE ===== -->
             <div id="page-percentage" class="page-content">
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
-                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Percentage Calculator Guide
+                    <a href="#" onclick="showPage('home'); return false;">Home</a> <span>›</span> Percentage Calculator Guide
                 </nav>
                 <article class="article-content">
                     <h1>Percentage Calculator Guide</h1>
@@ -949,8 +943,8 @@
                     <aside class="related-guides">
                         <h3>Related Guides</h3>
                         <ul>
-                            <li><a href="#" onclick="showPage('financial')">Financial Calculators Guide</a></li>
-                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('financial'); return false;">Financial Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('math'); return false;">Math Calculators Guide</a></li>
                         </ul>
                     </aside>
                 </article>
@@ -964,12 +958,12 @@
         <div class="container footer-container">
             <p>&copy; <span id="year"></span> <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">CalculatorAuxo</a>. Guides hosted on <a href="https://github.com/snowcalculator/CalculatorAuxo" target="_blank" rel="noopener">GitHub</a>.</p>
             <nav class="footer-nav">
-                <a href="#" onclick="showPage('home')">Home</a>
-                <a href="#" onclick="showPage('financial')">Finance</a>
-                <a href="#" onclick="showPage('math')">Math</a>
-                <a href="#" onclick="showPage('fitness')">Fitness</a>
-                <a href="#" onclick="showPage('gpa')">GPA</a>
-                <a href="#" onclick="showPage('percentage')">Percentage</a>
+                <a href="#" onclick="showPage('home'); return false;">Home</a>
+                <a href="#" onclick="showPage('financial'); return false;">Finance</a>
+                <a href="#" onclick="showPage('math'); return false;">Math</a>
+                <a href="#" onclick="showPage('fitness'); return false;">Fitness</a>
+                <a href="#" onclick="showPage('gpa'); return false;">GPA</a>
+                <a href="#" onclick="showPage('percentage'); return false;">Percentage</a>
                 <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">Main Site</a>
             </nav>
         </div>

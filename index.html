@@ -1,257 +1,1077 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CalculatorAuxo | Free Online Calculators</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculatorAuxo Guides — Free Calculator Tutorials & Resources</title>
+    <meta name="description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages. Real examples, tips, and free tools.">
+    <link rel="canonical" href="https://snowcalculator.github.io/CalculatorAuxo/">
+    <meta property="og:title" content="CalculatorAuxo Guides — Free Calculator Tutorials & Resources">
+    <meta property="og:description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages.">
+    <meta property="og:url" content="https://snowcalculator.github.io/CalculatorAuxo/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CalculatorAuxo Guides — Free Calculator Tutorials & Resources">
+    <meta name="twitter:description" content="Learn how to use calculators effectively with practical guides for finance, math, fitness, GPA, and percentages.">
+    <style>
+        /* ===== CSS Reset & Variables ===== */
+        :root {
+            --primary: #2d7b46;
+            --primary-dark: #1f5a32;
+            --primary-light: #e8f5ed;
+            --secondary: #1a5fb4;
+            --text: #1e293b;
+            --text-light: #475569;
+            --bg: #f6f9f7;
+            --white: #ffffff;
+            --gray-100: #f1f5f4;
+            --gray-200: #e2e8e6;
+            --gray-300: #cbd5d1;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 10px;
+            --transition: 0.25s ease;
+            --max-width: 1120px;
+            --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-body{
-font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
-background:linear-gradient(145deg,#f6f9fc,#e9f1f8);
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:30px;
-color:#1d2939;
-}
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
 
-.container{
-max-width:850px;
-width:100%;
-background:white;
-border-radius:25px;
-padding:40px;
-box-shadow:0 15px 50px rgba(0,0,0,.08);
-}
+        /* ===== Header ===== */
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0.6rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo a {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: baseline;
+            gap: 0.15rem;
+        }
+        .logo a span {
+            color: var(--primary);
+        }
+        .logo small {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-left: 0.25rem;
+        }
 
-.badge{
-display:inline-block;
-padding:8px 18px;
-background:#0b3b60;
-color:#fff;
-border-radius:30px;
-font-size:13px;
-margin-bottom:15px;
-font-weight:600;
-}
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.4rem;
+        }
+        .hamburger {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: var(--text);
+            position: relative;
+            transition: var(--transition);
+        }
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 3px;
+            background: var(--text);
+            left: 0;
+            transition: var(--transition);
+        }
+        .hamburger::before {
+            top: -8px;
+        }
+        .hamburger::after {
+            top: 8px;
+        }
+        .nav-toggle.open .hamburger {
+            background: transparent;
+        }
+        .nav-toggle.open .hamburger::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        .nav-toggle.open .hamburger::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
 
-h1{
-font-size:42px;
-margin-bottom:10px;
-}
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+            flex-wrap: wrap;
+        }
+        .nav-list a {
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .nav-list a:hover,
+        .nav-list a.active {
+            background: var(--primary-light);
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav-list a.active {
+            background: var(--primary);
+            color: var(--white);
+        }
 
-h1 span{
-color:#0b6db7;
-}
+        /* ===== Main ===== */
+        main {
+            flex: 1;
+            padding: 2rem 0;
+        }
 
-.header p{
-font-size:18px;
-color:#555;
-}
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+            padding: 2.8rem 0;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .hero-sub {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 700px;
+        }
+        .hero .btn {
+            margin-top: 1rem;
+        }
 
-.backlink{
-margin:35px 0;
-padding:25px;
-background:#eef5fa;
-border-left:6px solid #0b6db7;
-border-radius:15px;
-}
+        /* ===== Buttons ===== */
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.6rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+        }
 
-.backlink h3{
-margin-bottom:10px;
-color:#0b3b60;
-}
+        /* ===== Guide Grid ===== */
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .guide-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-100);
+        }
+        .guide-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .guide-card h3 {
+            margin-bottom: 0.4rem;
+        }
+        .guide-card h3 a {
+            color: var(--text);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .guide-card h3 a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .guide-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .guide-card .btn {
+            font-size: 0.85rem;
+            padding: 0.35rem 1.1rem;
+        }
 
-.backlink a{
-font-size:24px;
-text-decoration:none;
-font-weight:bold;
-color:#0b6db7;
-}
+        /* ===== About ===== */
+        .about-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+            border: 1px solid var(--gray-200);
+        }
+        .about-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .about-section p {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
 
-.backlink a:hover{
-text-decoration:underline;
-}
+        /* ===== CTA Section ===== */
+        .cta-section {
+            background: var(--white);
+            padding: 2.2rem 0;
+            text-align: center;
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-200);
+        }
+        .cta-section h2 {
+            font-size: 1.7rem;
+            margin-bottom: 0.4rem;
+        }
+        .cta-section p {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+        }
 
-.note{
-margin-top:10px;
-font-size:15px;
-color:#555;
-}
+        /* ===== Article Pages ===== */
+        .page-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page-content.active {
+            display: block;
+        }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-margin-top:35px;
-}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-.card{
-background:#fafafa;
-padding:22px;
-border-radius:15px;
-text-align:center;
-transition:.3s;
-}
+        .breadcrumbs {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            padding: 0.4rem 0;
+        }
+        .breadcrumbs a {
+            color: var(--primary);
+            cursor: pointer;
+        }
+        .breadcrumbs span {
+            margin: 0 0.3rem;
+        }
 
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
+        .article-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-100);
+        }
+        .article-content h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.4rem;
+            line-height: 1.2;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1.8rem;
+            margin-bottom: 0.6rem;
+            color: var(--text);
+        }
+        .article-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+        .article-content p {
+            margin-bottom: 0.9rem;
+            color: var(--text-light);
+        }
+        .article-content ul,
+        .article-content ol {
+            margin: 0 0 1rem 1.5rem;
+            color: var(--text-light);
+        }
+        .article-content li {
+            margin-bottom: 0.25rem;
+        }
+        .article-content .faq-item {
+            background: var(--gray-100);
+            padding: 0.9rem 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 0.7rem;
+        }
+        .article-content .faq-item strong {
+            display: block;
+            font-size: 1rem;
+            color: var(--text);
+        }
+        .article-content .faq-item p {
+            margin-bottom: 0;
+        }
 
-.icon{
-font-size:40px;
-margin-bottom:10px;
-}
+        .article-tool-cta {
+            background: var(--primary-light);
+            padding: 1.3rem;
+            border-radius: var(--radius);
+            margin: 1.8rem 0 1rem;
+            text-align: center;
+        }
+        .article-tool-cta p {
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+            color: var(--text);
+        }
+        .article-tool-cta .btn {
+            font-size: 1rem;
+        }
 
-.card h4{
-margin-bottom:8px;
-color:#0b3b60;
-}
+        .related-guides {
+            margin-top: 1.8rem;
+            padding-top: 1.2rem;
+            border-top: 2px solid var(--gray-200);
+        }
+        .related-guides h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+        .related-guides ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .related-guides ul li {
+            margin: 0;
+        }
+        .related-guides ul li a {
+            background: var(--gray-100);
+            padding: 0.25rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .related-guides ul li a:hover {
+            background: var(--primary-light);
+            text-decoration: none;
+        }
 
-.footer{
-margin-top:40px;
-text-align:center;
-border-top:1px solid #ddd;
-padding-top:20px;
-font-size:15px;
-}
+        /* ===== Footer ===== */
+        .site-footer {
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            padding: 1.2rem 0;
+            margin-top: 2rem;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .footer-container p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .footer-nav {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .footer-nav a {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+        .footer-nav a:hover {
+            color: var(--primary);
+        }
 
-.footer a{
-color:#0b6db7;
-font-weight:bold;
-text-decoration:none;
-}
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 0.8rem 0;
+                gap: 0.15rem;
+            }
+            .nav-list.open {
+                display: flex;
+            }
+            .nav-list a {
+                display: block;
+                padding: 0.4rem 0.6rem;
+                font-size: 0.95rem;
+            }
 
-.footer a:hover{
-text-decoration:underline;
-}
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero-sub {
+                font-size: 1rem;
+            }
+            .article-content {
+                padding: 1.2rem;
+            }
+            .article-content h1 {
+                font-size: 1.5rem;
+            }
+            .article-content h2 {
+                font-size: 1.2rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-nav {
+                justify-content: center;
+            }
+            .about-section {
+                padding: 1.2rem;
+            }
+        }
 
-@media(max-width:600px){
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .hero {
+                padding: 1.8rem 0;
+            }
+            .article-tool-cta {
+                padding: 0.8rem;
+            }
+        }
 
-.container{
-padding:25px;
-}
-
-h1{
-font-size:32px;
-}
-
-.backlink a{
-font-size:20px;
-}
-
-}
-</style>
-
+        /* ===== Utilities ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#" onclick="showPage('home')" aria-label="CalculatorAuxo Guides home">Calculator<span>Auxo</span> <small>Guides</small></a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Menu</span>
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul id="primary-nav" class="nav-list">
+                    <li><a href="#" onclick="showPage('home')" class="active" data-page="home">Home</a></li>
+                    <li><a href="#" onclick="showPage('financial')" data-page="financial">Finance</a></li>
+                    <li><a href="#" onclick="showPage('math')" data-page="math">Math</a></li>
+                    <li><a href="#" onclick="showPage('fitness')" data-page="fitness">Fitness</a></li>
+                    <li><a href="#" onclick="showPage('gpa')" data-page="gpa">GPA</a></li>
+                    <li><a href="#" onclick="showPage('percentage')" data-page="percentage">Percentage</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<div class="header">
+    <!-- ===== MAIN ===== -->
+    <main id="main-content" role="main">
+        <div class="container">
 
-<div class="badge">
-🧮 500+ Free Online Calculators
-</div>
+            <!-- ===== HOME PAGE ===== -->
+            <div id="page-home" class="page-content active">
+                <section class="hero">
+                    <h1>Calculator Guides &amp; Resources</h1>
+                    <p class="hero-sub">Learn how online calculators work with practical guides, examples, and useful calculation tips. Each guide links to the exact tool you need on <strong>CalculatorAuxo</strong> — 500+ free calculators, no sign-up.</p>
+                    <a href="https://calculatorauxo.com/" class="btn btn-primary" target="_blank" rel="noopener">Visit CalculatorAuxo →</a>
+                </section>
 
-<h1>
-Welcome to <span>CalculatorAuxo</span>
-</h1>
+                <section>
+                    <h2 class="section-title">Featured Guides</h2>
+                    <div class="card-grid">
+                        <article class="guide-card">
+                            <h3><a href="#" onclick="showPage('financial')">Financial Calculators Guide</a></h3>
+                            <p>Master paycheck, tax, NPV, loan, and retirement calculations. Understand financial formulas and make informed decisions.</p>
+                            <a href="#" onclick="showPage('financial')" class="btn btn-outline">Read Guide</a>
+                        </article>
+                        <article class="guide-card">
+                            <h3><a href="#" onclick="showPage('math')">Math Calculators Guide</a></h3>
+                            <p>Explore algebra, geometry, statistics, and equation solvers. Learn to solve complex problems with step-by-step help.</p>
+                            <a href="#" onclick="showPage('math')" class="btn btn-outline">Read Guide</a>
+                        </article>
+                        <article class="guide-card">
+                            <h3><a href="#" onclick="showPage('fitness')">Fitness Calculators Guide</a></h3>
+                            <p>Calculate 1RM, VDOT, BMR, and training zones. Optimize your workouts with accurate fitness metrics.</p>
+                            <a href="#" onclick="showPage('fitness')" class="btn btn-outline">Read Guide</a>
+                        </article>
+                        <article class="guide-card">
+                            <h3><a href="#" onclick="showPage('gpa')">GPA Calculator Guide</a></h3>
+                            <p>Calculate cumulative, semester, and weighted GPA. Understand grading scales and academic performance tracking.</p>
+                            <a href="#" onclick="showPage('gpa')" class="btn btn-outline">Read Guide</a>
+                        </article>
+                        <article class="guide-card">
+                            <h3><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></h3>
+                            <p>Master percentage calculations: increases, decreases, markups, and discounts. Essential for shopping, finance, and data analysis.</p>
+                            <a href="#" onclick="showPage('percentage')" class="btn btn-outline">Read Guide</a>
+                        </article>
+                    </div>
+                </section>
 
-<p>
-Fast, accurate, and free online calculators for finance, health, math, business, unit conversions, and everyday calculations.
-</p>
+                <section class="about-section">
+                    <h2>About CalculatorAuxo</h2>
+                    <p>CalculatorAuxo is a free online platform offering <strong>500+ specialized calculators</strong> across multiple categories. From financial and math tools to fitness and education, every calculator is designed for speed, accuracy, and ease of use — no sign-up required.</p>
+                    <p>This guide website helps you understand <strong>how calculators work</strong>, provides practical examples, and connects you to the right tool for your needs.</p>
+                </section>
 
-</div>
+                <section class="cta-section">
+                    <h2>Ready to calculate?</h2>
+                    <p>Find the exact tool you need among 500+ free calculators — no registration required.</p>
+                    <a href="https://calculatorauxo.com/" class="btn btn-primary" target="_blank" rel="noopener">Try the Calculator</a>
+                </section>
+            </div>
 
-<div class="backlink">
+            <!-- ===== FINANCIAL GUIDE ===== -->
+            <div id="page-financial" class="page-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Financial Calculators Guide
+                </nav>
+                <article class="article-content">
+                    <h1>Financial Calculators Guide</h1>
+                    <p><strong>Published:</strong> August 2026</p>
 
-<h3>🌐 Featured Calculator Website</h3>
+                    <h2>Why Use Financial Calculators?</h2>
+                    <p>Financial calculators help you make informed decisions about money. Whether you're budgeting, planning for retirement, or evaluating an investment, these tools provide quick, accurate answers. <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">CalculatorAuxo</a> offers a full suite of financial calculators for personal and professional use.</p>
 
-<a href="https://calculatorauxo.com" target="_blank">
-CalculatorAuxo – Free Online Calculators
-</a>
+                    <h2>Key Financial Calculators on CalculatorAuxo</h2>
 
-<div class="note">
-No registration • Instant results • Mobile friendly • Hundreds of calculators available.
-</div>
+                    <h3>Paycheck Calculator</h3>
+                    <p>Understand your take-home pay after taxes and deductions. Enter your gross salary, filing status, and state to see net income. This is essential for <strong>budgeting and financial planning</strong>. Use the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">paycheck calculator</a> to estimate your earnings accurately.</p>
 
-</div>
+                    <h3>Loan Calculator</h3>
+                    <p>Calculate monthly payments, total interest, and amortization schedules for any loan. Whether it's a mortgage, auto loan, or personal loan, this tool helps you <strong>compare borrowing options</strong>. Try the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">loan calculator</a> before committing to any debt.</p>
 
-<div class="grid">
+                    <h3>NPV Calculator (Net Present Value)</h3>
+                    <p>Evaluate investment opportunities by discounting future cash flows to their present value. This is a <strong>key metric in corporate finance and investing</strong>. Use the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">NPV calculator</a> for project evaluation.</p>
 
-<div class="card">
-<div class="icon">🧮</div>
-<h4>500+ Calculators</h4>
-<p>Finance, Math, Health, Business and more.</p>
-</div>
+                    <h3>Retirement Calculator</h3>
+                    <p>Plan for your future by estimating how much you need to save and how long your savings will last. Consider factors like inflation, contributions, and expected returns. The <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">retirement calculator</a> helps you set realistic goals.</p>
 
-<div class="card">
-<div class="icon">⚡</div>
-<h4>Fast Results</h4>
-<p>Instant calculations with accurate formulas.</p>
-</div>
+                    <h2>Tips for Accurate Financial Calculations</h2>
+                    <ul>
+                        <li><strong>Use realistic assumptions:</strong> Don't overestimate returns or underestimate expenses.</li>
+                        <li><strong>Check your inputs:</strong> Double-check numbers for typos — small errors can lead to large miscalculations.</li>
+                        <li><strong>Understand the formula:</strong> Knowing how a calculator works helps you interpret results and adjust parameters.</li>
+                        <li><strong>Compare multiple scenarios:</strong> Run different cases (optimistic, pessimistic) to see a range of outcomes.</li>
+                    </ul>
 
-<div class="card">
-<div class="icon">📱</div>
-<h4>Mobile Friendly</h4>
-<p>Works perfectly on desktop, tablet and mobile.</p>
-</div>
+                    <h2>Common Mistakes</h2>
+                    <ul>
+                        <li><strong>Ignoring inflation:</strong> Future dollars are worth less than today's. Always use real (inflation-adjusted) values.</li>
+                        <li><strong>Using wrong interest rate:</strong> Check whether the rate is annual or monthly, nominal or effective.</li>
+                        <li><strong>Forgetting fees:</strong> Include transaction fees, management fees, and other costs in your calculations.</li>
+                    </ul>
 
-<div class="card">
-<div class="icon">🔒</div>
-<h4>Private</h4>
-<p>Your calculations stay in your browser.</p>
-</div>
+                    <h2>FAQ</h2>
+                    <div class="faq-item">
+                        <strong>What is a good loan-to-value ratio for a mortgage?</strong>
+                        <p>Typically, lenders prefer LTV below 80% to avoid private mortgage insurance (PMI).</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>How much should I save for retirement?</strong>
+                        <p>A common rule is to save 15% of your income annually, but this varies by age, income, and goals.</p>
+                    </div>
 
-<div class="card">
-<div class="icon">📊</div>
-<h4>Financial Tools</h4>
-<p>Loans, mortgages, investments and savings.</p>
-</div>
+                    <div class="article-tool-cta">
+                        <p><strong>Want to calculate it yourself?</strong> Try the financial calculators on CalculatorAuxo.</p>
+                        <a href="https://calculatorauxo.com/" class="btn btn-primary" target="_blank" rel="noopener">Use the Financial Calculator</a>
+                    </div>
 
-<div class="card">
-<div class="icon">❤️</div>
-<h4>Health Calculators</h4>
-<p>BMI, calories, pregnancy, age and more.</p>
-</div>
+                    <aside class="related-guides">
+                        <h3>Related Guides</h3>
+                        <ul>
+                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                        </ul>
+                    </aside>
+                </article>
+            </div>
 
-</div>
+            <!-- ===== MATH GUIDE ===== -->
+            <div id="page-math" class="page-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Math Calculators Guide
+                </nav>
+                <article class="article-content">
+                    <h1>Math Calculators Guide</h1>
+                    <p><strong>Published:</strong> August 2026</p>
 
-<div class="footer">
+                    <h2>Why Use Math Calculators?</h2>
+                    <p>Math calculators save time, reduce errors, and help you understand complex problems. From basic arithmetic to advanced equations, <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">CalculatorAuxo</a> provides tools for students, professionals, and anyone who works with numbers.</p>
 
-<strong>Make smarter decisions with free online calculators.</strong>
+                    <h2>Essential Math Calculators</h2>
 
-<br><br>
+                    <h3>Algebra Calculator</h3>
+                    <p>Solve linear equations, quadratic equations, and systems of equations. This is invaluable for <strong>homework, test prep, and real-world problem-solving</strong>. Use the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">algebra calculator</a> to check your work.</p>
 
-Visit
+                    <h3>Geometry Calculator</h3>
+                    <p>Calculate area, perimeter, volume, and angles for shapes like triangles, circles, rectangles, and spheres. Essential for <strong>construction, design, and math classes</strong>. Try the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">geometry calculator</a> for quick measurements.</p>
 
-<a href="https://calculatorauxo.com" target="_blank">
-CalculatorAuxo.com
-</a>
+                    <h3>Statistics Calculator</h3>
+                    <p>Compute mean, median, mode, standard deviation, and more. Ideal for <strong>data analysis, research, and business intelligence</strong>.</p>
 
-for reliable and easy-to-use calculation tools.
+                    <h2>Tips for Using Math Calculators Effectively</h2>
+                    <ul>
+                        <li><strong>Understand the problem first:</strong> Know what you're solving before entering numbers.</li>
+                        <li><strong>Check units:</strong> Ensure all measurements are in the same units.</li>
+                        <li><strong>Use step-by-step solutions:</strong> Many calculators show work — use this to learn.</li>
+                    </ul>
 
-</div>
+                    <h2>Common Mistakes</h2>
+                    <ul>
+                        <li><strong>Order of operations:</strong> Enter expressions correctly (PEMDAS).</li>
+                        <li><strong>Sign errors:</strong> Double-check positive/negative values.</li>
+                        <li><strong>Rounding too early:</strong> Keep full precision until the final answer.</li>
+                    </ul>
 
-</div>
+                    <h2>FAQ</h2>
+                    <div class="faq-item">
+                        <strong>What is the difference between mean and median?</strong>
+                        <p>Mean is the average of all numbers; median is the middle value when sorted.</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>How do I calculate the area of a circle?</strong>
+                        <p>Area = π × r², where r is the radius.</p>
+                    </div>
 
-<script>
+                    <div class="article-tool-cta">
+                        <p><strong>Want to calculate it yourself?</strong> Try the math calculators on CalculatorAuxo.</p>
+                        <a href="https://calculatorauxo.com/" class="btn btn-primary" target="_blank" rel="noopener">Use the Math Calculator</a>
+                    </div>
 
-console.log("CalculatorAuxo");
-console.log("https://calculatorauxo.com");
+                    <aside class="related-guides">
+                        <h3>Related Guides</h3>
+                        <ul>
+                            <li><a href="#" onclick="showPage('financial')">Financial Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                        </ul>
+                    </aside>
+                </article>
+            </div>
 
-</script>
+            <!-- ===== FITNESS GUIDE ===== -->
+            <div id="page-fitness" class="page-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Fitness Calculators Guide
+                </nav>
+                <article class="article-content">
+                    <h1>Fitness Calculators Guide</h1>
+                    <p><strong>Published:</strong> August 2026</p>
+
+                    <h2>Why Use Fitness Calculators?</h2>
+                    <p>Fitness calculators help you measure performance, set goals, and train smarter. Whether you're a runner, lifter, or general fitness enthusiast, <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">CalculatorAuxo</a> offers tools to track progress and optimize your workouts.</p>
+
+                    <h2>Key Fitness Calculators</h2>
+
+                    <h3>1RM Calculator (One Rep Max)</h3>
+                    <p>Estimate the maximum weight you can lift for one repetition based on your performance at a lighter weight. This is essential for <strong>strength training and program design</strong>. Use the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">1RM calculator</a> to plan your lifting cycles.</p>
+
+                    <h3>VDOT Calculator (Running Performance)</h3>
+                    <p>Calculate your VO2max equivalent based on race times. This helps runners <strong>set training paces and predict race performance</strong>. Try the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">VDOT calculator</a>.</p>
+
+                    <h3>BMR Calculator (Basal Metabolic Rate)</h3>
+                    <p>Determine how many calories you burn at rest. This is the foundation for <strong>weight management and nutrition planning</strong>.</p>
+
+                    <h2>Tips for Accurate Fitness Calculations</h2>
+                    <ul>
+                        <li><strong>Use consistent units:</strong> Enter weight in pounds or kilograms consistently.</li>
+                        <li><strong>Test your max safely:</strong> For 1RM, use submaximal tests to avoid injury.</li>
+                        <li><strong>Re-evaluate regularly:</strong> Update measurements as fitness improves.</li>
+                    </ul>
+
+                    <h2>Common Mistakes</h2>
+                    <ul>
+                        <li><strong>Overestimating effort:</strong> Be honest with inputs to get realistic outputs.</li>
+                        <li><strong>Ignoring recovery:</strong> Fitness calculations assume you're well-rested.</li>
+                        <li><strong>Using outdated data:</strong> Update your weight, age, and performance regularly.</li>
+                    </ul>
+
+                    <h2>FAQ</h2>
+                    <div class="faq-item">
+                        <strong>How accurate is the 1RM calculator?</strong>
+                        <p>It's an estimate. Actual 1RM may vary by ±5–10%.</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>What is a good VDOT score for a beginner runner?</strong>
+                        <p>VDOT scores range from 30 (beginner) to 80+ (elite).</p>
+                    </div>
+
+                    <div class="article-tool-cta">
+                        <p><strong>Want to calculate it yourself?</strong> Try the fitness calculators on CalculatorAuxo.</p>
+                        <a href="https://calculatorauxo.com/" class="btn btn-primary" target="_blank" rel="noopener">Use the Fitness Calculator</a>
+                    </div>
+
+                    <aside class="related-guides">
+                        <h3>Related Guides</h3>
+                        <ul>
+                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                        </ul>
+                    </aside>
+                </article>
+            </div>
+
+            <!-- ===== GPA GUIDE ===== -->
+            <div id="page-gpa" class="page-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> GPA Calculator Guide
+                </nav>
+                <article class="article-content">
+                    <h1>GPA Calculator Guide</h1>
+                    <p><strong>Published:</strong> August 2026</p>
+
+                    <h2>Why Use a GPA Calculator?</h2>
+                    <p>Your Grade Point Average (GPA) is a key metric in academics. It affects college admissions, scholarships, and job opportunities. <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">CalculatorAuxo</a> offers a <strong>GPA calculator</strong> to help you track and plan your academic performance.</p>
+
+                    <h2>Types of GPA Calculators</h2>
+
+                    <h3>Semester GPA Calculator</h3>
+                    <p>Calculate your GPA for a single term based on grades and credit hours. This helps you <strong>see immediate results and adjust study habits</strong>. Use the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">semester GPA calculator</a>.</p>
+
+                    <h3>Cumulative GPA Calculator</h3>
+                    <p>Combine grades from multiple semesters to see your overall academic standing. Essential for <strong>tracking progress toward graduation requirements</strong>.</p>
+
+                    <h3>Weighted GPA Calculator</h3>
+                    <p>Accounts for course difficulty (e.g., AP, IB, honors). This gives a <strong>more nuanced view of academic achievement</strong>.</p>
+
+                    <h2>Understanding Grading Scales</h2>
+                    <ul>
+                        <li><strong>4.0 Scale:</strong> A=4, B=3, C=2, D=1, F=0 (most common).</li>
+                        <li><strong>Weighted Scale:</strong> AP/IB courses may add +0.5 or +1.0 to the grade point.</li>
+                        <li><strong>Pass/Fail:</strong> These courses don't affect GPA.</li>
+                    </ul>
+
+                    <h2>Tips for Using a GPA Calculator</h2>
+                    <ul>
+                        <li><strong>Know your school's scale:</strong> Some schools use 5.0 or 10.0 scales.</li>
+                        <li><strong>Include all courses:</strong> Remember to count every graded course.</li>
+                        <li><strong>Update regularly:</strong> Recalculate after each grading period.</li>
+                    </ul>
+
+                    <h2>FAQ</h2>
+                    <div class="faq-item">
+                        <strong>What's a good GPA for college admissions?</strong>
+                        <p>Competitive colleges often expect 3.5+ unweighted.</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>How do I raise my GPA quickly?</strong>
+                        <p>Focus on future courses and retake any failed classes if allowed.</p>
+                    </div>
+
+                    <div class="article-tool-cta">
+                        <p><strong>Want to calculate it yourself?</strong> Try the GPA calculator on CalculatorAuxo.</p>
+                        <a href="https://calculatorauxo.com/" class="btn btn-primary" target="_blank" rel="noopener">Use the GPA Calculator</a>
+                    </div>
+
+                    <aside class="related-guides">
+                        <h3>Related Guides</h3>
+                        <ul>
+                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('percentage')">Percentage Calculator Guide</a></li>
+                        </ul>
+                    </aside>
+                </article>
+            </div>
+
+            <!-- ===== PERCENTAGE GUIDE ===== -->
+            <div id="page-percentage" class="page-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="#" onclick="showPage('home')">Home</a> <span>›</span> Percentage Calculator Guide
+                </nav>
+                <article class="article-content">
+                    <h1>Percentage Calculator Guide</h1>
+                    <p><strong>Published:</strong> August 2026</p>
+
+                    <h2>Why Use a Percentage Calculator?</h2>
+                    <p>Percentages are everywhere — from shopping discounts to financial returns. A <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">percentage calculator</a> helps you compute percentage changes, markups, discounts, and more quickly and accurately.</p>
+
+                    <h2>Common Percentage Calculations</h2>
+
+                    <h3>Percentage Increase</h3>
+                    <p>Calculate how much a value has increased relative to its original amount. Example: A price went from $50 to $60 — that's a 20% increase. Use the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">percentage increase calculator</a>.</p>
+
+                    <h3>Percentage Decrease</h3>
+                    <p>Find the reduction in value as a percentage. Example: A $100 item on sale for $80 is a 20% decrease. Try the <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">percentage decrease calculator</a>.</p>
+
+                    <h3>Percentage of a Number</h3>
+                    <p>Find what percentage one number is of another. Example: 25 out of 200 is 12.5%.</p>
+
+                    <h3>Discount Calculator</h3>
+                    <p>Determine the sale price after a percentage discount. Essential for <strong>shopping and budgeting</strong>.</p>
+
+                    <h2>Tips for Accurate Percentage Calculations</h2>
+                    <ul>
+                        <li><strong>Identify the base value:</strong> Know which number represents 100%.</li>
+                        <li><strong>Check your arithmetic:</strong> Small errors can change results significantly.</li>
+                        <li><strong>Use the right formula:</strong> Increase = (New - Old) / Old × 100.</li>
+                    </ul>
+
+                    <h2>Common Mistakes</h2>
+                    <ul>
+                        <li><strong>Confusing percentage point vs. percent:</strong> A 2% increase from 5% to 7% is a 40% relative increase.</li>
+                        <li><strong>Using wrong base:</strong> Always divide by the original value for change calculations.</li>
+                        <li><strong>Rounding prematurely:</strong> Keep full precision until final step.</li>
+                    </ul>
+
+                    <h2>FAQ</h2>
+                    <div class="faq-item">
+                        <strong>How do I calculate a 20% discount?</strong>
+                        <p>Multiply the original price by 0.80 (1 - 0.20).</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>What is the formula for percentage increase?</strong>
+                        <p>((New Value - Original Value) / Original Value) × 100.</p>
+                    </div>
+
+                    <div class="article-tool-cta">
+                        <p><strong>Want to calculate it yourself?</strong> Try the percentage calculator on CalculatorAuxo.</p>
+                        <a href="https://calculatorauxo.com/" class="btn btn-primary" target="_blank" rel="noopener">Use the Percentage Calculator</a>
+                    </div>
+
+                    <aside class="related-guides">
+                        <h3>Related Guides</h3>
+                        <ul>
+                            <li><a href="#" onclick="showPage('financial')">Financial Calculators Guide</a></li>
+                            <li><a href="#" onclick="showPage('math')">Math Calculators Guide</a></li>
+                        </ul>
+                    </aside>
+                </article>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; <span id="year"></span> <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">CalculatorAuxo</a>. Guides hosted on <a href="https://github.com/snowcalculator/CalculatorAuxo" target="_blank" rel="noopener">GitHub</a>.</p>
+            <nav class="footer-nav">
+                <a href="#" onclick="showPage('home')">Home</a>
+                <a href="#" onclick="showPage('financial')">Finance</a>
+                <a href="#" onclick="showPage('math')">Math</a>
+                <a href="#" onclick="showPage('fitness')">Fitness</a>
+                <a href="#" onclick="showPage('gpa')">GPA</a>
+                <a href="#" onclick="showPage('percentage')">Percentage</a>
+                <a href="https://calculatorauxo.com/" target="_blank" rel="noopener">Main Site</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Page Navigation Function =====
+        function showPage(pageId) {
+            // Get all page containers
+            var pages = document.querySelectorAll('.page-content');
+            
+            // Hide all pages
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            
+            // Show the selected page
+            var targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Update navigation active state
+            var navLinks = document.querySelectorAll('.nav-list a');
+            for (var j = 0; j < navLinks.length; j++) {
+                navLinks[j].classList.remove('active');
+                if (navLinks[j].getAttribute('data-page') === pageId) {
+                    navLinks[j].classList.add('active');
+                }
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Close mobile menu
+            var nav = document.getElementById('primary-nav');
+            var toggle = document.getElementById('navToggle');
+            if (nav && toggle) {
+                nav.classList.remove('open');
+                toggle.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+            
+            // Update URL hash
+            if (pageId === 'home') {
+                history.pushState(null, '', '/CalculatorAuxo/');
+            } else {
+                history.pushState(null, '', '/CalculatorAuxo/#page-' + pageId);
+            }
+            
+            // Update page title
+            var titles = {
+                'home': 'CalculatorAuxo Guides — Free Calculator Tutorials & Resources',
+                'financial': 'Financial Calculators Guide — Loans, Paycheck, NPV & More | CalculatorAuxo',
+                'math': 'Math Calculators Guide — Algebra, Geometry & Statistics | CalculatorAuxo',
+                'fitness': 'Fitness Calculators Guide — 1RM, VDOT, BMR & Training Zones | CalculatorAuxo',
+                'gpa': 'GPA Calculator Guide — Cumulative, Semester & Weighted GPA | CalculatorAuxo',
+                'percentage': 'Percentage Calculator Guide — Increases, Discounts & Markups | CalculatorAuxo'
+            };
+            document.title = titles[pageId] || 'CalculatorAuxo Guides';
+        }
+
+        // ===== Mobile Menu Toggle =====
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggle = document.getElementById('navToggle');
+            var nav = document.getElementById('primary-nav');
+            
+            if (toggle && nav) {
+                toggle.addEventListener('click', function() {
+                    var isOpen = nav.classList.toggle('open');
+                    toggle.classList.toggle('open');
+                    toggle.setAttribute('aria-expanded', isOpen);
+                });
+            }
+            
+            // Set current year
+            var yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+            
+            // Check URL hash on load
+            var hash = window.location.hash;
+            if (hash && hash.indexOf('#page-') === 0) {
+                var page = hash.replace('#page-', '');
+                showPage(page);
+            } else {
+                showPage('home');
+            }
+            
+            // Handle browser back/forward
+            window.addEventListener('popstate', function() {
+                var h = window.location.hash;
+                if (h && h.indexOf('#page-') === 0) {
+                    var page = h.replace('#page-', '');
+                    showPage(page);
+                } else {
+                    showPage('home');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
